@@ -1,0 +1,121 @@
+.home-container {
+    width: 100%;
+    max-width: 1120px;
+    height: calc(100vh - 180px);
+    margin: 0 auto;
+}
+
+.home-container .content {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container section h1 {
+    text-align: center;
+    font-size: 24px;
+    width: 100% !important;
+    margin-top: 20px;
+}
+
+.home-container .content form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.home-container .content form input,
+.home-container .content form textarea {
+    margin-top: 8px;
+}
+
+.home-container h1 {
+    color: #c58c80;
+}
+
+.home-container ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.home-container ul li {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    min-height: 32px;
+    font-size: 18px;
+    background:#fffafa;
+    line-height: 32px;
+    padding-left: 5px;
+    color: #666666;
+    border-bottom: 1px solid transparent;
+}
+
+.home-container ul li:hover {
+    opacity: 0.8;
+    border-color: #ddd;
+}
+
+.home-container ul li strong {
+    margin-right: 15px;
+    color: #41414d;
+}
+
+.home-container ul li p + strong {
+    margin-top: 32px;
+}
+
+.home-container ul li p {
+    color: #737380;
+    line-height: 21px;
+    font-size: 16px;
+    margin-right: 5px;
+    width: 100%;
+    padding: 10px;
+}
+.home-container section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.home-container section div {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+}
+.home-container ul li span {
+    margin: 10px;
+}
+.home-container ul li span a {
+    color: #666666;
+}
+
+@media screen and (max-width: 991px) {
+    .home-container ul li p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .home-container section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .home-container section {
+        padding: 0px;
+    }
+    .home-container .content {
+        padding: 0px;
+    }
+}

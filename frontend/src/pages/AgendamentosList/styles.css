@@ -1,0 +1,92 @@
+.content {
+  position: relative;
+}
+.content h1 {
+  width: calc(100% - 100px);
+}
+.formListAgendamentos {
+  display: flex;
+}
+.listAgendamentos {
+  width: 100%;
+  margin-left: 30px;
+  list-style: none;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+}
+.listAgendamentos li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #fff0f0;
+  cursor: pointer;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+.atendido {
+  background: #e6ffe6 !important;
+  color: #666666 !important;
+}
+.listAgendamentos li a {
+  color: #666666;
+  margin-left: 5px;
+}
+.listAgendamentos li p {
+  width: 100%;
+  margin-bottom: 0px !important;
+  font-size: 14px;
+}
+.listAgendamentos li:hover {
+  background: #fff0f0;
+}
+.listAgendamentos li strong {
+  margin-right: 10px;
+}
+@media screen and (max-width: 600px) {
+  .content form {
+    display: block;
+  }
+  .content h1 {
+    width: 100%;
+  }
+  .listAgendamentos {
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 5px;
+  }
+  .react-calendar {
+    width: 100%;
+  }
+}
+.react-calendar {
+  color: #666666 !important;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+.react-calendar button {
+  color: #666666;
+  font-size: 14px;
+}
+.react-calendar__tile--active, .react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus {
+  background: #c18e83 !important;
+  color: #ffffff !important;
+}
+
+.react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+  background: #fffafa;
+}
+.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
+  background: #fffafa;
+}
+.react-calendar__tile--now {
+  background: #666666;
+  color: #ffffff !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #ffbeb4 !important;
+}

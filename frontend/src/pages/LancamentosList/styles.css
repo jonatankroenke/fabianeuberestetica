@@ -1,0 +1,96 @@
+.entrada {
+  background: #e6ffe6 !important;
+}
+.saida {
+  background: #ffd4d4 !important;
+}
+.saldo {
+  background: #e1e1ff !important;
+}
+.contentTotais {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin-bottom: 20px;
+}
+.contentTotais.home {
+  grid-template-columns: repeat(1, 1fr) !important;
+  grid-gap: 10px;
+}
+.contentTotais div {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  border: 2px solid #fff;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.contentTotais div svg {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #999;
+  width: 35px !important;
+  height: 35px !important;
+}
+.contentTotais div:hover {
+  box-shadow: 0px 0px 10px 0px #ddd;
+}
+.contentTotais div:hover svg {
+  color: #666;
+}
+.contentTotais div h2 {
+  font-size: 28px;
+  color: #666666;
+}
+.contentTotais div p {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.badgeLancamento {
+  font-size: 12px;
+  color: #666;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background: #fff;
+  padding: 5px;
+}
+@media screen and (max-width: 991px) {
+  .contentTotais div svg {
+    right: 5px;
+    top: 5px;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .contentTotais div h2 {
+    font-size: 22px !important;
+  }
+  form input[type="date"] {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contentTotais div h2 {
+    font-size: 18px !important;
+  }
+  .contentTotais div p {
+    font-size: 14px !important;
+  }
+  form input[type="date"] {
+    padding: 0 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contentTotais div svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .contentTotais div {
+    padding: 10px !important;
+  }
+  .contentTotais div h2 {
+    font-size: 16px !important;
+  }
+}

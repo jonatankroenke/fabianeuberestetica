@@ -1,0 +1,15 @@
+.selectGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.btn-excluir {
+  width: 150px !important;
+  background: red !important;
+  margin-right: 10px;
+}
+
+.btn-finalizar {
+  width: 150px !important;
+  background: green !important;
+}

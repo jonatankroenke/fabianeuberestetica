@@ -1,0 +1,67 @@
+.gradient-login {
+    background: linear-gradient(90deg, #ffffff 50%, #fffafa 50%);
+}
+
+.logon-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logon-container section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.logon-container section img {
+    max-width: 500px;
+    width: 100%;
+}
+
+.logon-container section form {
+    max-width: 500px;
+    width: 100%;
+}
+
+
+.logon-container section.form form h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+    color: #c58c80;
+}
+
+.logon-container section.form form input + input {
+    margin-top: 22px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .logon-container {
+        display: block;
+    }
+
+    .logon-container section {
+        width: 100%;
+    }
+
+    .logon-container section img {
+        width: 250px;
+        margin-top: 40px;
+    }
+
+    .logon-container section form h1 {
+        text-align: center;
+        font-size: 24px !important;
+    }
+
+    .gradient-login {
+        background: #fffafa;
+    }
+}

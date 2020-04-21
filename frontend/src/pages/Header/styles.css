@@ -1,0 +1,228 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo img {
+    height: 40px;
+    margin: 5px;
+    margin-left:  30px;
+}
+
+.nav-trigger {
+    display: none;
+}
+
+.nav-trigger svg {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    color: #c58c80;
+}
+
+.side-nav {
+    position: absolute;
+    width: 100%;
+    max-width: 250px;
+    height: calc(100vh - 60px);
+    background-color: #666666;
+    z-index: 1;
+    display: block;
+    top: 60px;
+    font-size: 18px;
+}
+
+.side-nav ul {
+    margin: 0;
+    padding: 0;
+}
+.side-nav ul li {
+    border-bottom: 1px solid #656565;
+    position: relative;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+.side-nav ul li:hover {
+    background: #777777;
+}
+.side-nav ul li a {
+    padding: 16px 16px;
+    color: #fff;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    height: 57px;
+    width: 100%;
+}
+.side-nav ul li a svg {
+    min-width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+.side-nav ul li span:nth-child(2) {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content-principal {
+    position: relative;
+}
+/* main content styles */
+.main-content {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    overflow-x: hidden;
+    width: calc(100% - 250px);
+    position: absolute;
+    left: 250px;
+    top:0px;
+}
+
+.logout-button {
+    color: #c58c80;
+    height: 40px;
+    width: 75px;
+    border-radius: 4px;
+    border: 1px solid #dcdce6;
+    background: transparent;
+    margin: 5px;
+    margin-right: 20px;
+    transition: border-color 0.5s;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logout-button svg {
+    margin-right: 4px;
+}
+
+.logout-button:hover {
+    border-color: #999;
+}
+
+.logout-button-mobile {
+    display: none !important;
+}
+
+/* set element styles to fit tablet and higher(desktop) */
+@media screen and (max-width: 767px) {
+    .main-content.loading .loadPage {
+        position:fixed;
+        left: 0px;
+        top: 50px;
+    }
+    .header {
+        background-color: #ffffff;
+        z-index: 1;
+    }
+    .header .logo {
+        margin-right: 20px;
+    }
+    .nav-trigger {
+        display: block;
+    }
+    .nav-trigger span, .nav-trigger span:before, span:after {
+        background-color: #fff;
+    }
+    .logout-button-mobile {
+        display: block;
+    }
+    .side-nav {
+        display: none;
+        max-width: 200px !important;
+        position: relative;
+        z-index: 2;
+        transition: display 2s;
+    }
+    .side-nav ul li span:nth-child(2) {
+        display: none;
+    }
+    .side-nav .logo i {
+        padding-left: 12px;
+    }
+    .side-nav .logo span {
+        display: none;
+    }
+    .side-nav ul li i {
+        font-size: 26px;
+    }
+    .side-nav ul li a {
+        text-align: center;
+    }
+    .main-content {
+        width: 100% !important;
+        left: 0px !important;
+        padding: 20px !important;
+    }
+    .logout-button {
+        display: none;
+    }
+    .logout-button-mobile {
+        display: block !important;
+    }
+}
+/* set element styles for desktop */
+@media screen and (max-width: 991px) {
+    .side-nav {
+        max-width: 200px;
+    }
+    .side-nav ul li span:nth-child(2) {
+        display: inline-block;
+    }
+    .side-nav ul li i {
+        font-size: 16px;
+    }
+    .side-nav ul li a {
+        text-align: left;
+    }
+    .side-nav .logo i {
+        padding-left: 0;
+    }
+    .side-nav .logo span {
+        display: inline-block;
+    }
+    .main-content {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+}
+
+.side-nav.visible {
+    display: block;
+}
+.main-content.loading .loadPage {
+    display: flex;
+}
+.loadPage {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    z-index: 99;
+    background:rgba(80, 80, 80, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+.loadPage svg {
+    width: 100px;
+    height: 100px;
+    animation: rodar 1s infinite linear;
+    -webkit-animation: rodar 1s infinite linear;
+    color: #fff;
+} 
+@-webkit-keyframes rodar {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+@keyframes rodar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
